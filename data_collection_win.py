@@ -9,7 +9,7 @@ if not mt5.initialize():
 
 # specify the symbol and timeframe to retrieve data for
 symbol = "XAUUSD"
-timeframe = mt5.TIMEFRAME_M30
+timeframe = mt5.TIMEFRAME_H4
 d = datetime.now()
 dt = datetime(d.year, d.month, d.day)
 
@@ -21,7 +21,7 @@ df = pd.DataFrame(rates)
 df["time"] = pd.to_datetime(df["time"], unit="s")
 
 # save the data to a CSV file
-df.to_csv("data/XAUUSD.csv", index=False)
+df.to_csv("data/XAUUSD_H4.csv", index=False)
 
 # disconnect from MetaTrader 5
 mt5.shutdown()

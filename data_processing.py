@@ -11,7 +11,7 @@ def normalize(arr):
 # Create a dataset class
 class Stock:
 
-    def __init__(self, stock_pd_dataframe=pd.read_csv("data/XAUUSD.csv")):
+    def __init__(self, stock_pd_dataframe=pd.read_csv("data/XAUUSD_H4.csv")):
         self.dataframe = stock_pd_dataframe
 
     def get_mean_price(self):
